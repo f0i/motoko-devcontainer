@@ -14,3 +14,10 @@ sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
     wget https://github.com/dfinity/vessel/releases/download/v0.6.4/vessel-linux64 -O vessel
     chmod +x vessel
 )
+
+# install expect
+sudo apt-get update
+sudo apt-get -y install expect
+
+# install mops
+npm i -g ic-mops
