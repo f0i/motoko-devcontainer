@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 # update with current npm version
-npm install -g npm@9.6.1
+npm install -g npm@9.7.1
 
 # install dfx
 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
@@ -21,3 +21,9 @@ sudo apt-get -y install expect
 
 # install mops
 npm i -g ic-mops
+
+# plantuml
+sudo apt -y install plantuml
+# too old, overwrite with newer version
+wget https://github.com/plantuml/plantuml/releases/download/v1.2023.9/plantuml.jar
+sudo mv plantuml.jar /usr/share/plantuml/plantuml.jar
