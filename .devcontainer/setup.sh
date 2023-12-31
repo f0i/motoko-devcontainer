@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 # update with current npm version
-npm install -g npm@9.7.1
+npm install -g npm@10.2.3
 
 # install dfx
 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
@@ -11,7 +11,7 @@ sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 # install vessel
 (
     cd ~/bin/
-    wget https://github.com/dfinity/vessel/releases/download/v0.6.4/vessel-linux64 -O vessel
+    wget https://github.com/dfinity/vessel/releases/download/v0.7.0/vessel-linux64 -O vessel
     chmod +x vessel
 )
 
@@ -21,6 +21,9 @@ sudo apt-get -y install expect
 
 # install mops
 npm i -g ic-mops
+
+# install mocv
+npm i -g mocv
 
 # plantuml
 sudo apt -y install plantuml
